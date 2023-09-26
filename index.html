@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/32b55ad97e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Backgammon</title>
+  </head>
+  <body>
+    <section>
+      <div class="main d-flex justify-content-center align-items-center w-100">
+        <div class="top-buttons d-flex mb-2 justify-content-between">
+          <div class="btn-1 fa-solid fa-maximize"></div>
+          <div class="btn-1 fa-solid fa-xmark"></div>
+        </div>
+        <div class="board">
+          <div class="left-bin">
+            <div class="piece-holders">
+              <div class="piece-holder-p1 fa-solid fa-user">
+                <br /><span>p1</span>
+              </div>
+              <div class="piece-holder-p2 fa-solid fa-user">
+                <br />
+                <span>p2</span>
+              </div>
+            </div>
+            <div class="game-board">
+              <div class="top-row">
+                <div class="arrows">
+                  <div class="arrow-down odd"></div>
+                  <div class="arrow-down even"></div>
+                  <div class="arrow-down odd"></div>
+                  <div class="arrow-down even"></div>
+                  <div class="arrow-down odd"></div>
+                  <div class="arrow-down even"></div>
+                </div>
+                <div class="selectors">
+                  <div class="column">
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                  </div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column">
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                  </div>
+                  <div class="column"></div>
+                </div>
+              </div>
+              <div class="bottom-row">
+                <div class="arrows">
+                  <div class="arrow-up odd"></div>
+                  <div class="arrow-up even"></div>
+                  <div class="arrow-up odd"></div>
+                  <div class="arrow-up even"></div>
+                  <div class="arrow-up odd"></div>
+                  <div class="arrow-up even"></div>
+                </div>
+                <div class="selectors">
+                  <div class="column">
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                  </div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column">
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                  </div>
+                  <div class="column"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="middle">
+            <!-- <div class="coin">
+              <div class="tails"></div>
+              <div class="heads"></div>
+            </div> -->
+          </div>
+          <div class="right-bin">
+            <div class="game-board">
+              <div class="top-row">
+                <div class="arrows">
+                  <div class="arrow-down odd"></div>
+                  <div class="arrow-down even"></div>
+                  <div class="arrow-down odd"></div>
+                  <div class="arrow-down even"></div>
+                  <div class="arrow-down odd"></div>
+                  <div class="arrow-down even"></div>
+                </div>
+                <div class="selectors">
+                  <div class="column">
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                  </div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column">
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-row">
+                <div class="arrows">
+                  <div class="arrow-up odd"></div>
+                  <div class="arrow-up even"></div>
+                  <div class="arrow-up odd"></div>
+                  <div class="arrow-up even"></div>
+                  <div class="arrow-up odd"></div>
+                  <div class="arrow-up even"></div>
+                </div>
+                <div class="selectors">
+                  <div class="column">
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                    <div class="coin-white"></div>
+                  </div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column">
+                    <div class="coin-red"></div>
+                    <div class="coin-red"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="piece-holders">
+              <div class="piece-holder-p1"></div>
+              <div class="piece-holder-p2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-buttons d-flex mt-2 justify-content-between">
+          <div class="btn-1 fa-solid fa-message"></div>
+        </div>
+      </div>
+    </section>
+    <script src="src/app.js"></script>
+  </body>
+</html>
