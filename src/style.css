@@ -26,6 +26,67 @@ section {
   background-color: var(--primary-color);
   box-shadow: 25px -25px 75px inset var(--shadow-color);
 }
+
+.start-button,
+.dice-generator {
+  position: absolute;
+  background-color: var(--light-color);
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 5vw;
+  padding: 2vw 3vw;
+  border: unset;
+  border-radius: 1vw;
+  transition: 150ms all ease-in-out;
+  box-shadow: 0rem 0rem 100rem rgb(0, 0, 0), 0rem 0rem 1rem rgb(0, 0, 0);
+}
+
+.start-button:hover,
+.dice-generator:hover {
+  background-color: var(--coin-color);
+}
+
+.message {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--light-color);
+  margin: 0 auto;
+  padding-right: 3vw;
+  font-size: 2vw;
+}
+
+.dices {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 500ms all ease-out;
+}
+
+.rotate-dices {
+  transform: rotate(90deg) translate(-25%, 3.4vw);
+  width: 7vw;
+}
+
+.dice {
+  width: 40%;
+  object-fit: cover;
+}
+
+.dice > img {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+}
+
 .main {
   height: 100vh;
   flex-direction: column;
@@ -66,15 +127,45 @@ section {
   height: 48%;
   width: 100%;
   border-radius: 3px;
-  font-size: 25px;
+  font-size: 3vw;
   text-align: center;
   padding-top: 10px;
   color: var(--shadow-color);
+  position: relative;
 }
 
 .piece-holder-p1 span,
 .piece-holder-p2 span {
-  font-size: 15px;
+  font-size: 2vw;
+}
+
+.pieces-start-place {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.piece-vertic-white {
+  width: calc(90%);
+  height: calc(85% / 15);
+  border-radius: 3px;
+  background-color: var(--light-color);
+  box-shadow: 1px -1px 3px inset var(--shadow-color),
+    0px 0px 5px var(--shadow-color);
+}
+
+.piece-vertic-red {
+  width: calc(90%);
+  height: calc(85% / 15);
+  border-radius: 3px;
+  background-color: var(--dark-color);
+  box-shadow: 1px -1px 3px inset var(--shadow-color),
+    0px 0px 5px var(--shadow-color);
 }
 
 .game-board {
@@ -168,6 +259,11 @@ section {
   align-items: center;
 }
 
+.available {
+  background-color: rgba(121, 185, 27, 0.547);
+  cursor: pointer;
+}
+
 .bottom-row .selectors .column {
   justify-content: flex-end;
 }
@@ -176,6 +272,7 @@ section {
   width: 1.5%;
   height: 100%;
   background-color: black;
+  position: relative;
 }
 
 .top-buttons,
@@ -221,6 +318,10 @@ section {
     1px 1px 5px inset var(--coin-color2);
   border: 4px solid var(--dark-color);
   z-index: 100;
+}
+
+.hidden {
+  display: none;
 }
 
 /* .coin {

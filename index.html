@@ -37,134 +37,50 @@
         <div class="board">
           <div class="left-bin">
             <div class="piece-holders">
-              <div class="piece-holder-p1 fa-solid fa-user">
-                <br /><span>p1</span>
-              </div>
               <div class="piece-holder-p2 fa-solid fa-user">
+                <br /><span>p2</span>
+                <div
+                  class="pieces-start-place"
+                  id="start-piece-holder-p2"
+                ></div>
+              </div>
+              <div class="piece-holder-p1 fa-solid fa-user">
                 <br />
-                <span>p2</span>
+                <span>p1</span>
+                <div
+                  class="pieces-start-place"
+                  id="start-piece-holder-p1"
+                ></div>
               </div>
             </div>
-            <div class="game-board">
-              <div class="top-row">
-                <div class="arrows">
-                  <div class="arrow-down odd"></div>
-                  <div class="arrow-down even"></div>
-                  <div class="arrow-down odd"></div>
-                  <div class="arrow-down even"></div>
-                  <div class="arrow-down odd"></div>
-                  <div class="arrow-down even"></div>
-                </div>
-                <div class="selectors">
-                  <div class="column">
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                  </div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column">
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                  </div>
-                  <div class="column"></div>
-                </div>
+            <div class="game-board" id="outter-board">
+              <div class="top-row" id="red-outter-board">
+                <div class="arrows"></div>
+                <div class="selectors"></div>
               </div>
-              <div class="bottom-row">
-                <div class="arrows">
-                  <div class="arrow-up odd"></div>
-                  <div class="arrow-up even"></div>
-                  <div class="arrow-up odd"></div>
-                  <div class="arrow-up even"></div>
-                  <div class="arrow-up odd"></div>
-                  <div class="arrow-up even"></div>
-                </div>
-                <div class="selectors">
-                  <div class="column">
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                  </div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column">
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                  </div>
-                  <div class="column"></div>
-                </div>
+              <div class="bottom-row" id="white-outter-board">
+                <div class="arrows"></div>
+                <div class="selectors"></div>
               </div>
             </div>
           </div>
           <div class="middle">
-            <!-- <div class="coin">
-              <div class="tails"></div>
-              <div class="heads"></div>
-            </div> -->
+            <button class="start-button">START</button>
+            <button class="dice-generator hidden">Roll</button>
+            <div class="dices">
+              <div class="dice"></div>
+              <div class="dice"></div>
+            </div>
           </div>
           <div class="right-bin">
-            <div class="game-board">
-              <div class="top-row">
-                <div class="arrows">
-                  <div class="arrow-down odd"></div>
-                  <div class="arrow-down even"></div>
-                  <div class="arrow-down odd"></div>
-                  <div class="arrow-down even"></div>
-                  <div class="arrow-down odd"></div>
-                  <div class="arrow-down even"></div>
-                </div>
-                <div class="selectors">
-                  <div class="column">
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                  </div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column">
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                  </div>
-                </div>
+            <div class="game-board" id="inner-board">
+              <div class="top-row" id="red-inner-board">
+                <div class="arrows"></div>
+                <div class="selectors"></div>
               </div>
-              <div class="bottom-row">
-                <div class="arrows">
-                  <div class="arrow-up odd"></div>
-                  <div class="arrow-up even"></div>
-                  <div class="arrow-up odd"></div>
-                  <div class="arrow-up even"></div>
-                  <div class="arrow-up odd"></div>
-                  <div class="arrow-up even"></div>
-                </div>
-                <div class="selectors">
-                  <div class="column">
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                    <div class="coin-white"></div>
-                  </div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column"></div>
-                  <div class="column">
-                    <div class="coin-red"></div>
-                    <div class="coin-red"></div>
-                  </div>
-                </div>
+              <div class="bottom-row" id="white-inner-board">
+                <div class="arrows"></div>
+                <div class="selectors"></div>
               </div>
             </div>
             <div class="piece-holders">
@@ -175,6 +91,7 @@
         </div>
         <div class="bottom-buttons d-flex mt-2 justify-content-between">
           <div class="btn-1 fa-solid fa-message"></div>
+          <p class="message"></p>
         </div>
       </div>
     </section>
